@@ -9,6 +9,7 @@ import './app.scss'
 // if (process.env.NODE_ENV !== 'production' && process.env.TARO_ENV === 'h5')  {
 //   require('nerv-devtools')
 // }
+/* icon.scss */
 
 class App extends Component {
 
@@ -21,28 +22,25 @@ class App extends Component {
    */
   config: Config = {
     pages: [
-      'pages/index/index',
-      'pages/page1/index',
-      'pages/page2/index',
-      'pages/page3/index',
-      'pages/page4/index'
+      'pages/tools/tools',
+      'pages/order/order',
     ],
     window: {
-      backgroundTextStyle: 'light',
-      navigationBarBackgroundColor: '#fff',
-      navigationBarTitleText: 'WeChat',
-      navigationBarTextStyle: 'black'
+      "backgroundTextStyle": "dark",
+      "backgroundColor": "#1abc9c",
+      "navigationBarBackgroundColor": "#13BF6C",
+      "navigationBarTitleText": "礼邦物流",
+      "navigationBarTextStyle": "white",
+      "enablePullDownRefresh": false
     },
     tabBar: {
       color: "#333",
       selectedColor: "#666",
       backgroundColor: "#fff",
       list: [
-        {pagePath: "pages/index/index", text: "首页"},
-        {pagePath: "pages/page1/index", text: "page1"},
-        {pagePath: "pages/page2/index", text: "page2"},
-        {pagePath: "pages/page3/index", text: "page3"},
-        {pagePath: "pages/page4/index", text: "page4"}
+        {pagePath: "pages/tools/tools", text: "主页",iconPath: "assets/images/tools_home.png",selectedIconPath:'assets/images/tools_home_sel.png'},
+        {pagePath: "pages/order/order", text: "已完成订单",iconPath: "assets/images/ic_home_wddd.png",selectedIconPath:'assets/images/ic_home_wddd_select.png'},
+
       ]
     }
       

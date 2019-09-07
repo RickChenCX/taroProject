@@ -26,11 +26,13 @@ const httpRequest = async function(obj: RequestArgs) {
 }
 
 // test 请求
-export async function test(){
+export async function test(url,data,method){
+    if(!data)return
+    method = method || 'post'
     let params = {
-        url: baseUrl + '/api/queryUsers',
-        data: {},
-        method: "POST",
+        url: baseUrl + url,
+        data: data.data,
+        method: data.method,
       } as any;
     let result = await httpRequest(params)
     return result.data;  

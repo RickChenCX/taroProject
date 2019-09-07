@@ -1,6 +1,6 @@
 import Taro, { Component, Config } from '@tarojs/taro'
 import { View, Text } from '@tarojs/components'
-import './index.scss'
+import './order.scss'
 
 export default class Index extends Component {
 
@@ -28,7 +28,7 @@ export default class Index extends Component {
   render () {
     return (
       <View className='index'>
-        <Text>Hello world! page1</Text>
+        <Text>我是订单页面</Text>
       </View>
     )
   }
